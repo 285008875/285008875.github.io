@@ -19,11 +19,11 @@
     <meta name="description" content="title: js局部变量和函数命名提升date: 2018-04-04 00:58:09 categories  javascript     之前接触了一些javascript局部变量命名提升的问题但是一直没有总结今天特地好好总结一下 变量提升 一个变量的作用域是程序源代码中定义的这个变量的区域。全局变量拥有全局作用域，在javascript代码中任何地方都有的定义。但是函数中声明的变量只在">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" | 张国安">
-<meta property="og:url" content="https://285008875.github.io/2018/04/04/js局部变量和函数命名提升/cjfkl9kml0001q0upyh9uhxuq">
+<meta property="og:url" content="https://285008875.github.io/2018/04/04/js局部变量和函数命名提升/cjfklo8hx00023wupnithl75m">
 <meta property="og:site_name" content="张国安">
 <meta property="og:description" content="title: js局部变量和函数命名提升date: 2018-04-04 00:58:09 categories  javascript     之前接触了一些javascript局部变量命名提升的问题但是一直没有总结今天特地好好总结一下 变量提升 一个变量的作用域是程序源代码中定义的这个变量的区域。全局变量拥有全局作用域，在javascript代码中任何地方都有的定义。但是函数中声明的变量只在">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-04-04T04:22:44.387Z">
+<meta property="og:updated_time" content="2018-04-04T04:27:08.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" | 张国安">
 <meta name="twitter:description" content="title: js局部变量和函数命名提升date: 2018-04-04 00:58:09 categories  javascript     之前接触了一些javascript局部变量命名提升的问题但是一直没有总结今天特地好好总结一下 变量提升 一个变量的作用域是程序源代码中定义的这个变量的区域。全局变量拥有全局作用域，在javascript代码中任何地方都有的定义。但是函数中声明的变量只在">
