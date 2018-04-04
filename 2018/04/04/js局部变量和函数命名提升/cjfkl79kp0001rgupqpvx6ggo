@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+       | 张国安 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="张国安">
+    
+    
+
+    <meta name="description" content="title: js局部变量和函数命名提升date: 2018-04-04 00:58:09 categories  javascript     之前接触了一些javascript局部变量命名提升的问题但是一直没有总结今天特地好好总结一下 变量提升 一个变量的作用域是程序源代码中定义的这个变量的区域。全局变量拥有全局作用域，在javascript代码中任何地方都有的定义。但是函数中声明的变量只在">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" | 张国安">
+<meta property="og:url" content="https://285008875.github.io/2018/04/04/js局部变量和函数命名提升/cjfkl79kp0001rgupqpvx6ggo">
+<meta property="og:site_name" content="张国安">
+<meta property="og:description" content="title: js局部变量和函数命名提升date: 2018-04-04 00:58:09 categories  javascript     之前接触了一些javascript局部变量命名提升的问题但是一直没有总结今天特地好好总结一下 变量提升 一个变量的作用域是程序源代码中定义的这个变量的区域。全局变量拥有全局作用域，在javascript代码中任何地方都有的定义。但是函数中声明的变量只在">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2018-04-04T04:22:44.387Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" | 张国安">
+<meta name="twitter:description" content="title: js局部变量和函数命名提升date: 2018-04-04 00:58:09 categories  javascript     之前接触了一些javascript局部变量命名提升的问题但是一直没有总结今天特地好好总结一下 变量提升 一个变量的作用域是程序源代码中定义的这个变量的区域。全局变量拥有全局作用域，在javascript代码中任何地方都有的定义。但是函数中声明的变量只在">
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="285008875.github.io/css/uno.css">
+    <link rel="stylesheet" href="285008875.github.io/css/highlight.css">
+    <link rel="stylesheet" href="285008875.github.io/css/archive.css">
+    <link rel="stylesheet" href="285008875.github.io/css/china-social-icon.css">
+   
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+        <a href="/" title="link to homepage for 张国安"><img src="/touxiang.jpg" width="110" alt="张国安 logo" class="panel-cover__logo logo" /></a>
+        
+
+        <h4 class="panel-cover__title panel-title"><a href="/" title="link to homepage">张国安</a></h4>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          物质自由是不可能了,那就向往精神自由吧
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title"></h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-04-04" class="post-meta__date date">2018-04-04</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <hr>
+<p>title: js局部变量和函数命名提升<br>date: 2018-04-04 00:58:09</p>
+<p>categories</p>
+<ul>
+<li>javascript</li>
+</ul>
+<p>   之前接触了一些javascript局部变量命名提升的问题但是一直没有总结今天特地好好总结一下</p>
+<h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><hr>
+<pre><code>一个变量的作用域是程序源代码中定义的这个变量的区域。全局变量拥有全局作用域，在javascript代码中任何地方都有的定义。但是函数中声明的变量只在函数体内有定义，它是局部变量并且函数体内的的局部变量的优先级是高于同名全局变量，所以全局变量会被局部变量顶替。
+</code></pre><hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">"global"</span>;        <span class="comment">//全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkScope</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> scope = <span class="string">"local"</span>;       <span class="comment">//局部变量</span></span><br><span class="line">  <span class="built_in">console</span>.log(scope);        </span><br><span class="line">&#125;</span><br><span class="line">checkScope();              <span class="comment">// =&gt;"local"</span></span><br></pre></td></tr></table></figure>
+<p>同样大家就好理解这个例子了：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">"global"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkScope</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(scope);</span><br><span class="line">  <span class="keyword">var</span> scope = <span class="string">"local"</span>;</span><br><span class="line">&#125;</span><br><span class="line">checkScope();    <span class="comment">// =&gt;undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>   大家可能会想 <code>var scope = &quot;global&quot;;</code> 明明已经定义，怎么这里怎么会输出undefined；此时输出的scope并非  <code>var scope = &quot;global&quot;;</code> 而是  <code>var scope = &quot;local&quot;;</code> 。这就上面提到的函数体内的定义局部变量的优先级是高于同名全局变量，所以全局变量会被局部变量遮盖。并且只有声明的变量会提升，初始化的不会，因此上面的代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> scope = <span class="string">"global"</span>;</span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">checkScope</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> scope;</span><br><span class="line">   <span class="built_in">console</span>.log(scope);</span><br><span class="line">scope = <span class="string">"local"</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> checkScope();    <span class="comment">// =&gt;undefined</span></span><br></pre></td></tr></table></figure>
+<p>由此尽量我们在函数体头部声明并且初始化变量。</p>
+<p>###函数提升<br>    函数提升和变量提升类似，因此我们可以函数可以在声明之前调用。<br>    如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   fn(<span class="number">5</span>);</span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> y * y;         <span class="comment">// =&gt; 25</span></span><br><span class="line">   &#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">    但是另外要注意的是 使用表达式定义函数时无法提升。如下：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">   x(<span class="number">5</span>,<span class="number">3</span>);    </span><br><span class="line">   <span class="keyword">var</span> x = <span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;<span class="keyword">return</span> a * b&#125;; </span><br><span class="line">   <span class="comment">//Uncaught TypeError: x is not a function</span></span><br></pre></td></tr></table></figure></p>
+<p>至此就差不多了，欢迎斧正。</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2017-2018. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="285008875.github.io/js/jquery.min.js"></script>
+    <script src="285008875.github.io/js/main.js"></script>
+    <script src="285008875.github.io/js/scale.fix.js"></script>
+
+    
+    <!--<script type="text/javascript" src="js/base/canvas-nest.min.js"></script>-->
+    <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/config/TeX-AMS-MML_HTMLorMML.js"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="285008875.github.io/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+</body>
+</html>
